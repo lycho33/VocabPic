@@ -12,7 +12,7 @@ class VocabulariesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create vocabulary" do
     assert_difference('Vocabulary.count') do
-      post vocabularies_url, params: { vocabulary: { description: @vocabulary.description, trigger: @vocabulary.trigger, word: @vocabulary.word } }, as: :json
+      post vocabularies_url, params: { vocabulary: { description: @vocabulary.description, picture_id: @vocabulary.picture_id, trigger: @vocabulary.trigger, word: @vocabulary.word } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class VocabulariesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vocabulary" do
-    patch vocabulary_url(@vocabulary), params: { vocabulary: { description: @vocabulary.description, trigger: @vocabulary.trigger, word: @vocabulary.word } }, as: :json
+    patch vocabulary_url(@vocabulary), params: { vocabulary: { description: @vocabulary.description, picture_id: @vocabulary.picture_id, trigger: @vocabulary.trigger, word: @vocabulary.word } }, as: :json
     assert_response 200
   end
 

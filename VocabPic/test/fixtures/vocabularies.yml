@@ -4,8 +4,10 @@ one:
   word: MyString
   description: MyString
   trigger: MyString
+  picture: one
 
 two:
   word: MyString
   description: MyString
   trigger: MyString
+  picture: two

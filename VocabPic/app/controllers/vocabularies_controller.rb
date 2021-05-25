@@ -46,6 +46,6 @@ class VocabulariesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def vocabulary_params
-      params.require(:vocabulary).permit(:word, :description, :trigger)
+      params.require(:vocabulary).permit(:word, :description, :trigger, :picture_id)
     end
 end
