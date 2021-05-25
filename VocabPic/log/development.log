@@ -157,3 +157,59 @@ Processing by PicturesController#index as HTML
 Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 841)
 
 
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 13:54:22 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 1485)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:08:30 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1156)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.2ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcostumewall.com%2Fdress-like-cruella-de-vil%2F&psig=AOvVaw3wClX9oR73pU1ZSaQln-cs&ust=1622052275057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj2kee15fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:10:09.888324"], ["updated_at", "2021-05-25 18:10:09.888324"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drunkmonkeys.us%2F2017-posts%2F2020%2F4%2F12%2Fi-survived-because-of-looney-tunes-lessons-learned-from-bugs-bunny-by-sarah-ghoshal&psig=AOvVaw0WUPV8aqjm1yQVeYLt-E0C&ust=1622052414963000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjUm6a25fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:10:09.897332"], ["updated_at", "2021-05-25 18:10:09.897332"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.0ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fmikedud103%2Fart%2FJimmy-Neutron-860400253&psig=AOvVaw0flxlJ2sm3TEzz6CV6KVth&ust=1622052320586000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODIivi15fACFQAAAAAdAAAAABAJ"], ["created_at", "2021-05-25 18:10:09.905475"], ["updated_at", "2021-05-25 18:10:09.905475"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:10:13 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 2.1ms | Allocations: 3511)
+
+
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:11:16 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.5ms | Allocations: 5959)
+
+
+  
+NoMethodError (undefined method `vocabularies' for #<Picture:0x00007f8a08166540>):
+  
+app/controllers/api/v1/pictures_controller.rb:8:in `index'

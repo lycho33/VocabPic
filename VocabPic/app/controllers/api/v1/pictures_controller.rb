@@ -5,7 +5,7 @@ class Api::V1::PicturesController < ApplicationController
   def index
     @pictures = Picture.all
 
-    render json: @pictures
+    render json: @pictures, include: :vocabularies
   end
 
   # GET /pictures/1
