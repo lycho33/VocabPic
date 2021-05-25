@@ -5,7 +5,11 @@ class Api::V1::PicturesController < ApplicationController
   def index
     @pictures = Picture.all
 
-    render json: @pictures, include: :vocabularies
+    render json: @pictures, only: [:id, :image], include: {
+        vocabularies: {
+            except: [:created_at, :updated_at]
+        }
+    } 
   end
 
   # GET /pictures/1

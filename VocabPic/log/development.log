@@ -213,3 +213,373 @@ Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.5ms | Allocations: 
 NoMethodError (undefined method `vocabularies' for #<Picture:0x00007f8a08166540>):
   
 app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:15:20 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 53.3ms | ActiveRecord: 4.3ms | Allocations: 12380)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.2ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcostumewall.com%2Fdress-like-cruella-de-vil%2F&psig=AOvVaw3wClX9oR73pU1ZSaQln-cs&ust=1622052275057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj2kee15fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:16:09.335160"], ["updated_at", "2021-05-25 18:16:09.335160"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drunkmonkeys.us%2F2017-posts%2F2020%2F4%2F12%2Fi-survived-because-of-looney-tunes-lessons-learned-from-bugs-bunny-by-sarah-ghoshal&psig=AOvVaw0WUPV8aqjm1yQVeYLt-E0C&ust=1622052414963000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjUm6a25fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:16:09.344289"], ["updated_at", "2021-05-25 18:16:09.344289"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fmikedud103%2Fart%2FJimmy-Neutron-860400253&psig=AOvVaw0flxlJ2sm3TEzz6CV6KVth&ust=1622052320586000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODIivi15fACFQAAAAAdAAAAABAJ"], ["created_at", "2021-05-25 18:16:09.352415"], ["updated_at", "2021-05-25 18:16:09.352415"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:16:12 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.4ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 6]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.0ms | Allocations: 5424)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.6ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcostumewall.com%2Fdress-like-cruella-de-vil%2F&psig=AOvVaw3wClX9oR73pU1ZSaQln-cs&ust=1622052275057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj2kee15fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:19:29.442481"], ["updated_at", "2021-05-25 18:19:29.442481"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.0ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drunkmonkeys.us%2F2017-posts%2F2020%2F4%2F12%2Fi-survived-because-of-looney-tunes-lessons-learned-from-bugs-bunny-by-sarah-ghoshal&psig=AOvVaw0WUPV8aqjm1yQVeYLt-E0C&ust=1622052414963000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjUm6a25fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:19:29.454390"], ["updated_at", "2021-05-25 18:19:29.454390"]]
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.2ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fmikedud103%2Fart%2FJimmy-Neutron-860400253&psig=AOvVaw0flxlJ2sm3TEzz6CV6KVth&ust=1622052320586000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODIivi15fACFQAAAAAdAAAAABAJ"], ["created_at", "2021-05-25 18:19:29.465173"], ["updated_at", "2021-05-25 18:19:29.465173"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:19:36 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.4ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 6]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 7]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 8]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 9]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 3.0ms | Allocations: 7846)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "pictures"[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "pictures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "vocabularies"[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "vocabularies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "description" varchar, "trigger" varchar, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE INDEX "index_vocabularies_on_picture_id" ON "vocabularies" ("picture_id")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avocabularies" ("id" integer NOT NULL PRIMARY KEY, "word" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "trigger" varchar DEFAULT NULL, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_avocabularies_on_picture_id" ON "avocabularies" ("picture_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "avocabularies" ("id","word","description","trigger","picture_id","created_at","updated_at")
+                     SELECT "id","word","description","trigger","picture_id","created_at","updated_at" FROM "vocabularies"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "vocabularies"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "vocabularies" ("id" integer NOT NULL PRIMARY KEY, "word" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "trigger" varchar DEFAULT NULL, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_00f7086d92"
+FOREIGN KEY ("picture_id")
+  REFERENCES "pictures" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_vocabularies_on_picture_id" ON "vocabularies" ("picture_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "vocabularies" ("id","word","description","trigger","picture_id","created_at","updated_at")
+                     SELECT "id","word","description","trigger","picture_id","created_at","updated_at" FROM "avocabularies"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "avocabularies"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210525173224)[0m
+  [1m[35m (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210525172939);
+
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-25 18:20:35.522526"], ["updated_at", "2021-05-25 18:20:35.522526"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "41036e0049024c41b7d72f6704a90a72fbadec1c"], ["created_at", "2021-05-25 18:20:35.535091"], ["updated_at", "2021-05-25 18:20:35.535091"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "pictures"[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "pictures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "vocabularies"[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "vocabularies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "description" varchar, "trigger" varchar, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE INDEX "index_vocabularies_on_picture_id" ON "vocabularies" ("picture_id")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avocabularies" ("id" integer NOT NULL PRIMARY KEY, "word" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "trigger" varchar DEFAULT NULL, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_avocabularies_on_picture_id" ON "avocabularies" ("picture_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "avocabularies" ("id","word","description","trigger","picture_id","created_at","updated_at")
+                     SELECT "id","word","description","trigger","picture_id","created_at","updated_at" FROM "vocabularies"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "vocabularies"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "vocabularies" ("id" integer NOT NULL PRIMARY KEY, "word" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "trigger" varchar DEFAULT NULL, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_00f7086d92"
+FOREIGN KEY ("picture_id")
+  REFERENCES "pictures" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_vocabularies_on_picture_id" ON "vocabularies" ("picture_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "vocabularies" ("id","word","description","trigger","picture_id","created_at","updated_at")
+                     SELECT "id","word","description","trigger","picture_id","created_at","updated_at" FROM "avocabularies"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "avocabularies"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210525173224)[0m
+  [1m[35m (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210525172939);
+
+[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-25 18:20:35.626188"], ["updated_at", "2021-05-25 18:20:35.626188"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-05-25 18:20:35.643082"], ["key", "environment"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "41036e0049024c41b7d72f6704a90a72fbadec1c"], ["created_at", "2021-05-25 18:20:35.653283"], ["updated_at", "2021-05-25 18:20:35.653283"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.3ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcostumewall.com%2Fdress-like-cruella-de-vil%2F&psig=AOvVaw3wClX9oR73pU1ZSaQln-cs&ust=1622052275057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj2kee15fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:20:35.701615"], ["updated_at", "2021-05-25 18:20:35.701615"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drunkmonkeys.us%2F2017-posts%2F2020%2F4%2F12%2Fi-survived-because-of-looney-tunes-lessons-learned-from-bugs-bunny-by-sarah-ghoshal&psig=AOvVaw0WUPV8aqjm1yQVeYLt-E0C&ust=1622052414963000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjUm6a25fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:20:35.712361"], ["updated_at", "2021-05-25 18:20:35.712361"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fmikedud103%2Fart%2FJimmy-Neutron-860400253&psig=AOvVaw0flxlJ2sm3TEzz6CV6KVth&ust=1622052320586000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODIivi15fACFQAAAAAdAAAAABAJ"], ["created_at", "2021-05-25 18:20:35.721098"], ["updated_at", "2021-05-25 18:20:35.721098"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:20:53 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.5ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 6]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 7]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 8]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 9]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 3.2ms | Allocations: 7844)
+
+
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:20:56 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 4]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 5]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 6]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.4ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 7]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.5ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 8]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.4ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 9]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 3.5ms | Allocations: 7843)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVocabularies (20210525173224)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "vocabularies"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210525173224"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePictures (20210525172939)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "pictures"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210525172939"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePictures (20210525172939)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "pictures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210525172939"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVocabularies (20210525173224)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "vocabularies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar, "description" varchar, "trigger" varchar, "picture_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_00f7086d92"
+FOREIGN KEY ("picture_id")
+  REFERENCES "pictures" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_vocabularies_on_picture_id" ON "vocabularies" ("picture_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210525173224"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.0ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcostumewall.com%2Fdress-like-cruella-de-vil%2F&psig=AOvVaw3wClX9oR73pU1ZSaQln-cs&ust=1622052275057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj2kee15fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:24:37.527542"], ["updated_at", "2021-05-25 18:24:37.527542"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.2ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.drunkmonkeys.us%2F2017-posts%2F2020%2F4%2F12%2Fi-survived-because-of-looney-tunes-lessons-learned-from-bugs-bunny-by-sarah-ghoshal&psig=AOvVaw0WUPV8aqjm1yQVeYLt-E0C&ust=1622052414963000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjUm6a25fACFQAAAAAdAAAAABAD"], ["created_at", "2021-05-25 18:24:37.537371"], ["updated_at", "2021-05-25 18:24:37.537371"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPicture Create (1.6ms)[0m  [1m[32mINSERT INTO "pictures" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fmikedud103%2Fart%2FJimmy-Neutron-860400253&psig=AOvVaw0flxlJ2sm3TEzz6CV6KVth&ust=1622052320586000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCODIivi15fACFQAAAAAdAAAAABAJ"], ["created_at", "2021-05-25 18:24:37.547756"], ["updated_at", "2021-05-25 18:24:37.547756"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVocabulary Create (1.0ms)[0m  [1m[32mINSERT INTO "vocabularies" ("word", "description", "trigger", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["word", "abase"], ["description", "to humiliate, degrade"], ["trigger", "fall into abyss"], ["picture_id", 1], ["created_at", "2021-05-25 18:24:37.572928"], ["updated_at", "2021-05-25 18:24:37.572928"]]
+  [1m[36mVocabulary Create (0.1ms)[0m  [1m[32mINSERT INTO "vocabularies" ("word", "description", "trigger", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["word", "demean"], ["description", "to lower the status or stature of something"], ["trigger", "mean stunts to humiliate"], ["picture_id", 1], ["created_at", "2021-05-25 18:24:37.575773"], ["updated_at", "2021-05-25 18:24:37.575773"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVocabulary Create (1.1ms)[0m  [1m[32mINSERT INTO "vocabularies" ("word", "description", "trigger", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["word", "apathetic"], ["description", "lacking concern, emotion"], ["trigger", "no empathy"], ["picture_id", 2], ["created_at", "2021-05-25 18:24:37.582873"], ["updated_at", "2021-05-25 18:24:37.582873"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVocabulary Create (1.0ms)[0m  [1m[32mINSERT INTO "vocabularies" ("word", "description", "trigger", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["word", "cogent"], ["description", "intellectually convincing"], ["trigger", "the FBI agent was coherent"], ["picture_id", 3], ["created_at", "2021-05-25 18:24:37.592112"], ["updated_at", "2021-05-25 18:24:37.592112"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:24:40 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.5ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 5.1ms | Allocations: 11981)
+
+
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:26:02 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 4.8ms | Allocations: 11440)
+
+
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:26:27 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.4ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 4.7ms | Allocations: 11385)
+
+
+Started GET "/api/v1/pictures" for 127.0.0.1 at 2021-05-25 14:28:05 -0400
+Processing by Api::V1::PicturesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 1]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.5ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 2]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+  [1m[36mVocabulary Load (0.3ms)[0m  [1m[34mSELECT "vocabularies".* FROM "vocabularies" WHERE "vocabularies"."picture_id" = ?[0m  [["picture_id", 3]]
+  ↳ app/controllers/api/v1/pictures_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 4.5ms | Allocations: 11286)
+
+
